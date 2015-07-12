@@ -1,0 +1,1049 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"create",
+				"createQuestionElement"
+			],
+			[
+				"upg",
+				"upgradeEvent"
+			],
+			[
+				"pr",
+				"problem"
+			],
+			[
+				"is",
+				"isGoalState"
+			],
+			[
+				"date",
+				"dateInSec"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"RequestVo",
+				"RequestVoteResponse"
+			],
+			[
+				"App",
+				"AppendEntry"
+			],
+			[
+				"Re",
+				"RequestVoteResponse"
+			],
+			[
+				"core",
+				"core-scaffold"
+			],
+			[
+				"tran",
+				"translateX"
+			],
+			[
+				"last",
+				"lastHolderPosition"
+			],
+			[
+				"ang",
+				"angular-animate"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"nei",
+				"neighborGraph"
+			],
+			[
+				"neh",
+				"neighborGraph"
+			],
+			[
+				"previous",
+				"previousMutations"
+			],
+			[
+				"var",
+				"variations"
+			],
+			[
+				"mutate",
+				"mutateColumns"
+			],
+			[
+				"pop",
+				"populate_similar"
+			],
+			[
+				"fin",
+				"find_clump"
+			],
+			[
+				"number",
+				"number_to_pattern"
+			],
+			[
+				"patter",
+				"pattern_to_number"
+			],
+			[
+				"in",
+				"indicies"
+			],
+			[
+				"patt",
+				"pattern_count_indices"
+			],
+			[
+				"pattern_coun",
+				"pattern_count_indices"
+			],
+			[
+				"rever",
+				"reverse_complement"
+			],
+			[
+				"patte",
+				"pattern_count"
+			],
+			[
+				"ex",
+				"extractors"
+			],
+			[
+				"ext",
+				"extractors"
+			],
+			[
+				"extr",
+				"extractor_cls"
+			],
+			[
+				"inst",
+				"instructions"
+			],
+			[
+				"instr",
+				"instruction"
+			],
+			[
+				"instru",
+				"instruction"
+			],
+			[
+				"ins",
+				"instructions_css"
+			],
+			[
+				"ingre",
+				"ingredient"
+			],
+			[
+				"ingr",
+				"ingredients_css"
+			],
+			[
+				"next",
+				"next_links_css"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"get",
+				"getAudioContext"
+			],
+			[
+				"ing",
+				"ingredients"
+			],
+			[
+				"co",
+				"copy"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"tra",
+				"transitionend"
+			],
+			[
+				"backg",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 250,
+				"line_ending": "Windows",
+				"name": "index.html"
+			}
+		},
+		{
+			"file": "es6/db.js",
+			"settings":
+			{
+				"buffer_size": 523,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "es6/app.js",
+			"settings":
+			{
+				"buffer_size": 1834,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "es6/models/Question.js",
+			"settings":
+			{
+				"buffer_size": 73,
+				"line_ending": "Windows",
+				"name": "Question.js"
+			}
+		},
+		{
+			"file": "js/app.es5.js",
+			"settings":
+			{
+				"buffer_size": 5685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/db.js",
+			"settings":
+			{
+				"buffer_size": 1404,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "webpack.config.js",
+			"settings":
+			{
+				"buffer_size": 288,
+				"line_ending": "Windows",
+				"name": "webpack.config.js"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packagin",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 520.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/kevin/Documents/GitHub/indexedb",
+		"/C/Users/kevin/Documents/GitHub/indexedb/es6",
+		"/C/Users/kevin/Documents/GitHub/indexedb/js"
+	],
+	"file_history":
+	[
+		"/C/Users/kevin/Documents/GitHub/indexedb/es6/app.es6.js",
+		"/C/Users/kevin/Documents/GitHub/indexedb/js/db.es6.js",
+		"/C/Users/kevin/Documents/GitHub/indexedb/app.js",
+		"/C/Users/kevin/Documents/GitHub/indexedb/db.js",
+		"/C/Users/kevin/Documents/GitHub/indexedb/db.es6.js",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/bower.json",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/bower_components/polymer/PRIMER.md",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/bower_components/polymer/src/features/mini/template.html",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/bower_components/polymer/src/lib/dom-module.html",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/bower_components/polymer/src/lib/dom-api.html",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/bower_components/polymer/explainer/data-bind.vsdx",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/dist/polyfill.js",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/dory/dist/webcomponents.js",
+		"/C/Users/kevin/Downloads/node_modules/polyfill.js",
+		"/C/Users/kevin/Downloads/node_modules/babel/node_modules/babel-core/browser.js",
+		"/C/Users/kevin/Downloads/node_modules/babel/node_modules/babel-core/lib/babel/polyfill.js",
+		"/C/Users/kevin/Downloads/node_modules/babel/node_modules/babel-core/polyfill.js",
+		"/C/Users/kevin/Downloads/node_modules/babel/node_modules/babel-core/browser-polyfill.js",
+		"/C/Users/kevin/Downloads/node_modules/babel/polyfill.js",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/bin/compiled.js",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/app.js",
+		"/C/Users/kevin/Documents/GitHub/learning-es6/user.js",
+		"/C/Users/kevin/Documents/GitHub/hablamos/bower_components/web-animations-js/src/transform-handler.js",
+		"/C/Users/kevin/Documents/GitHub/hablamos/templates/thanks.html",
+		"/C/Users/kevin/Documents/GitHub/hablamos/templates/teach.html",
+		"/C/Users/kevin/Documents/GitHub/hablamos/hablamos.py",
+		"/C/Users/kevin/Documents/GitHub/hablamos/static/css/normalize.css",
+		"/C/Users/kevin/Documents/GitHub/hablamos/bower_components/core-icons/maps-icons.html",
+		"/C/Users/kevin/Documents/GitHub/hablamos/lib/flask/testsuite/test_apps/main_app.py",
+		"/C/Users/kevin/Documents/GitHub/hablamos/bower_components/install/Makefile",
+		"/C/Users/kevin/Documents/GitHub/hablamos/app.yaml",
+		"/C/Users/kevin/Documents/GitHub/hablamos/templates/layout.html",
+		"/C/Users/kevin/Documents/GitHub/hablamos/.gitignore",
+		"/C/Users/kevin/Documents/GitHub/hablamos/bower_components/web-animations-js/src/apply-preserving-inline-style.js",
+		"/C/Users/kevin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/kevin/Downloads/search/search/layouts/mediumSearch.lay",
+		"/C/Users/kevin/Downloads/search/search/test_cases/q6/medium_corners.solution",
+		"/C/Users/kevin/Downloads/search/search/layouts/mediumCorners.lay",
+		"/C/Users/kevin/Downloads/search/search/textDisplay.py",
+		"/C/RubyDevKit/config.yml",
+		"/C/RailsInstaller/DevKit/config.yml",
+		"/C/Users/kevin/Documents/GitHub/food/bower_components/core-icons/maps-icons.html",
+		"/C/Users/kevin/Documents/GitHub/food/manifest.webapp",
+		"/C/Users/kevin/Documents/GitHub/food/css/main.css",
+		"/C/Users/kevin/Documents/GitHub/food/food-components/fullscreen-dialog/style.css",
+		"/C/Users/kevin/Documents/GitHub/food/food-components/fullscreen-dialog/fullscreen-dialog.html",
+		"/C/Users/kevin/Documents/GitHub/Raft/node.go",
+		"/C/Users/kevin/Programs/index.html",
+		"/C/Users/kevin/Documents/GitHub/xboxfriends/index.html",
+		"/C/Users/kevin/Documents/GitHub/xboxfriends/.gitignore",
+		"/C/Users/kevin/Documents/Coursera/bioinformatics/problem1.py",
+		"/C/Users/kevin/AppData/Roaming/Sublime Text 3/Packages/GoSublime/USAGE.md",
+		"/C/Users/kevin/Documents/GitHub/material/src/components/form/form.js",
+		"/C/Users/kevin/Documents/GitHub/material/src/components/tabs/js/tabItemDirective.js",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/angular/angular.js",
+		"/C/Users/kevin/Documents/GitHub/material/material-icons/icons/system_icons/action/res-export/ic_input_24px.svg",
+		"/C/Users/kevin/Documents/GitHub/material/material-icons/icons/system_icons/social/res-export/ic_notifications_paused_24px.svg",
+		"/C/Users/kevin/Documents/GitHub/material/dist/material-design.min.js",
+		"/C/Users/kevin/Documents/GitHub/material/dist/material-design.css",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/C/Users/kevin/Documents/GitHub/material/src/main.scss",
+		"/C/Users/kevin/Documents/GitHub/recipe_crawler/main.py",
+		"/C/Users/kevin/Documents/GitHub/recipe_crawler/fetcher.py",
+		"/C/Users/kevin/Documents/GitHub/recipe_crawler/crawler.py",
+		"/C/Users/kevin/Downloads/sfpd_incident_all_csv/sfpd_incident_2014.csv",
+		"/C/Users/kevin/Documents/GitHub/recipe_crawler/AllRecipesExtractor.py",
+		"/C/Users/kevin/Documents/GitHub/recipe_crawler/recipe.py",
+		"/C/Users/kevin/Programs/generators.js.js",
+		"/C/Users/kevin/Programs/test.js",
+		"/C/Users/kevin/Documents/GitHub/material/config/build.config.js",
+		"/C/Users/kevin/Documents/GitHub/material/gulpfile.js",
+		"/C/Users/kevin/Pictures/trunk-club-1/DSC00604.JPG",
+		"/C/Program Files (x86)/NCSOFT/WildStar/Wildstar.exe",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/lib/src/index.js",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/test/src.js",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/.editorconfig",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/LICENSE",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp-util/node_modules/vinyl/lib/isNull.js",
+		"/C/Users/kevin/Documents/GitHub/material/docs/app/template/view-source.tmpl.html",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/jquery/src/attributes/val.js",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/liftoff/lib/build_config_name_regex.js",
+		"/C/Users/kevin/Documents/GitHub/material/bower.json",
+		"/C/Users/kevin/Documents/GitHub/material/src/components/tabs/tabs.js",
+		"/C/Users/kevin/Documents/GitHub/material/src/components/animate/effects.js",
+		"/C/Users/kevin/Documents/GitHub/material/src/components/animate/canvas/rippler.js",
+		"/C/Users/kevin/Documents/GitHub/material/src/components/tabs/tabs.spec.js",
+		"/C/Users/kevin/Documents/GitHub/material/config/karma.conf.js",
+		"/C/Users/kevin/Documents/GitHub/material/dist/material-design.js",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/test/fixtures/bom-utf16be.txt",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/jquery/src/effects.js",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/lib/phantom/examples/echoToFile.coffee",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/dgeni/node_modules/rimraf/test/test-async.js",
+		"/C/Users/kevin/Documents/GitHub/material/demo/angular/toast.html",
+		"/C/Users/kevin/Documents/GitHub/material/dist/docs/components/material.components.toast/demo1/toast-template.html",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp-jshint/src/gulpfile-path.js",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/angularytics/Gruntfile.js",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/orchestrator/lib/runTask.js",
+		"/C/Users/kevin/Documents/GitHub/material/config/lib/angular-animate-sequence/angular-animate-stylers.js",
+		"/C/Users/kevin/Documents/GitHub/material/docs/app/index.html",
+		"/C/Users/kevin/Documents/GitHub/material/dist/docs/index.html",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp-sass/node_modules/node-sass/libsass/kwd_arg_macros.hpp",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/angular/.bower.json",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/angularytics/license.md",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/jquery/src/offset.js",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/angularytics/package.json",
+		"/C/Users/kevin/Documents/GitHub/material/bower_components/jquery/MIT-LICENSE.txt",
+		"/C/Users/kevin/Documents/GitHub/material/node_modules/karma/lib/browser_collection.js",
+		"/C/Users/kevin/Documents/GitHub/hellomaterial/www/index.html",
+		"/C/Users/kevin/Documents/GitHub/hellodart/platforms/android/cordova/node_modules/shelljs/.jshintrc",
+		"/C/Users/kevin/Documents/GitHub/hellodart/plugins/org.apache.cordova.camera/.fetch.json",
+		"/C/Users/kevin/Documents/GitHub/hellodart/packages/browser/dart.js",
+		"/C/Users/kevin/Documents/GitHub/hellodart/plugins/android.json",
+		"/C/Users/kevin/Documents/GitHub/hellodart/www/js/index.js",
+		"/C/Users/kevin/Documents/GitHub/hellodart/packages/browser/interop.js",
+		"/C/Users/kevin/Documents/GitHub/hellodart/platforms/android/.project",
+		"/C/Users/kevin/Documents/GitHub/material/docs/README.md",
+		"/C/Users/kevin/Documents/GitHub/material/src/components/tabs/demos/demo6/index.html",
+		"/C/Users/kevin/Documents/GitHub/material/docs/app/css/tab_demos.css",
+		"/C/Users/kevin/Documents/GitHub/material/assets/icons/system_icons/moticons/src/menu_to_arrowBack/menu_to_arrowBack.aep",
+		"/C/Users/kevin/Documents/GitHub/datasci_course_materials/output.txt",
+		"/C/Users/kevin/Documents/GitHub/datasci_course_materials/assignment1/output.txt",
+		"/C/Users/kevin/Documents/GitHub/datasci_course_materials/assignment1/twitterstream.py",
+		"/C/Users/kevin/Documents/GitHub/sound/web_components/oscillator-node.html",
+		"/C/Users/kevin/Documents/GitHub/food/platforms/android/cordova/node_modules/shelljs/src/grep.js",
+		"/C/Users/kevin/Documents/GitHub/food/gulpfile.js",
+		"/C/Users/kevin/Documents/GitHub/food/platforms/android/cordova/lib/start-emulator",
+		"/C/Users/kevin/Documents/GitHub/food/platforms/android/CordovaLib/src/org/apache/cordova/CordovaActivity.java",
+		"/C/Users/kevin/Documents/GitHub/food/platforms/android/CordovaLib/src/org/apache/cordova/CordovaArgs.java"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"",
+			"src/",
+			"",
+			"src/",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"_db",
+			"doubleclick",
+			"TodoActions",
+			"repeat",
+			"dom-module",
+			")\n",
+			"polyfill.js",
+			"Array.from",
+			"fetcher",
+			"visited",
+			"border-box",
+			"localhost",
+			"manhattanHeuristic",
+			"manhattan",
+			"Directions.WEST",
+			"Directions.SOUTH",
+			":]",
+			"\"\n",
+			"util",
+			"mCurrentPhotoPath",
+			"handlesmallcameraphoto",
+			"startActivityForResult",
+			"dispatchTakePictureIntent",
+			"mImageView",
+			"mImageBitmap",
+			"handleSmallCameraPhoto",
+			"handleBigCameraPhoto",
+			"RESULT_OK",
+			".content",
+			"primary_dark",
+			"primary",
+			"        \n",
+			"[]\n",
+			")]\n",
+			"len",
+			"i",
+			"end",
+			"disabled",
+			"ngdisabled",
+			"disabled",
+			"ngdisabled",
+			"ngDisabled",
+			"<material-input",
+			"materialInputGroup",
+			"materialInputGroup =",
+			"material-input-group",
+			"<material-input-group>",
+			"material-input-group",
+			"print",
+			"isvalidglob",
+			"src",
+			"src/",
+			"argv",
+			"canvasrenderer",
+			"canvasRenderer",
+			"effects",
+			"canvasRendererProvider",
+			"ngAnimateStylers",
+			"'scripts",
+			"task('build",
+			"buildConfig",
+			"ngAnimateStylers",
+			"angular.module('ngAnimateStylers')",
+			"ngAnimateStylers",
+			"minErr = ",
+			"minerr",
+			"injectorminerr",
+			"karmaconf",
+			"code.angularjs.org",
+			"<script src=",
+			"gym",
+			"someone",
+			"try",
+			"baby",
+			"love",
+			"never",
+			"\"delete",
+			"hw",
+			"urllib",
+			"watchlast",
+			"%;",
+			"flex",
+			"signup",
+			"edf0f1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"auto_name": "index.html",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "es6/db.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								520,
+								520
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "es6/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								900,
+								900
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "es6/models/Question.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 73,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Question.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/app.es5.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2574,
+								2590
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2112.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/db.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "webpack.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"auto_name": "webpack.config.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o://C:\\Users\\kevin\\AppData\\Roaming\\Sublime Text 3\\Packages\\GoSublime":
+	{
+		"height": 140.0
+	},
+	"output.9o://C:\\Users\\kevin\\Documents\\GitHub\\discovery\\frontend":
+	{
+		"height": 140.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 140.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "indexeddb.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"es6\\app.js"
+			],
+			[
+				"main",
+				"static\\css\\main.css"
+			],
+			[
+				"index",
+				"dory\\src\\index.html"
+			],
+			[
+				"dom",
+				"dory\\bower_components\\polymer\\src\\lib\\dom-module.html"
+			],
+			[
+				"ind",
+				"dory\\src\\index.html"
+			],
+			[
+				"thanks",
+				"templates\\thanks.html"
+			],
+			[
+				"habl",
+				"hablamos.py"
+			],
+			[
+				"layout",
+				"templates\\layout.html"
+			],
+			[
+				"app.",
+				"app.yaml"
+			],
+			[
+				"main.css",
+				"css\\main.css"
+			],
+			[
+				"angular.js",
+				"bower_components\\angular\\angular.js"
+			],
+			[
+				"fet",
+				"fetcher.py"
+			],
+			[
+				"all",
+				"AllRecipesExtractor.py"
+			],
+			[
+				"cra",
+				"crawler.py"
+			],
+			[
+				"buildconfig",
+				"config\\build.config.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"build.config",
+				"config\\build.config.js"
+			],
+			[
+				"effects",
+				"src\\components\\animate\\effects.js"
+			],
+			[
+				"tabs",
+				"src\\components\\tabs\\tabs.js"
+			],
+			[
+				"karma",
+				"config\\karma.conf.js"
+			],
+			[
+				"gulpfi",
+				"gulpfile.js"
+			],
+			[
+				"angular",
+				"bower_components\\angular\\angular.js"
+			],
+			[
+				"bower.js",
+				"bower.json"
+			],
+			[
+				"karma.conf.js",
+				"config\\karma.conf.js"
+			],
+			[
+				"bower_components/angular/angular.js",
+				"bower_components\\angular\\angular.js"
+			],
+			[
+				"gulpfile",
+				"gulpfile.js"
+			],
+			[
+				"recipe.",
+				"www\\templates\\recipe.html"
+			],
+			[
+				"gro",
+				"www\\templates\\tab-groceries.html"
+			],
+			[
+				"servi",
+				"www\\js\\services.js"
+			],
+			[
+				"rec",
+				"www\\templates\\recipe.html"
+			],
+			[
+				"filter",
+				"www\\js\\filters.js"
+			],
+			[
+				"mai",
+				"www\\main.html"
+			],
+			[
+				"recipe",
+				"www\\templates\\recipe.html"
+			],
+			[
+				"main.html",
+				"www\\main.html"
+			],
+			[
+				"direc",
+				"www\\js\\directives.js"
+			],
+			[
+				"app.js",
+				"www\\js\\app.js"
+			],
+			[
+				"cont",
+				"www\\js\\controllers.js"
+			],
+			[
+				"dir",
+				"www\\js\\directives.js"
+			],
+			[
+				"style",
+				"www\\css\\style.css"
+			],
+			[
+				"tab-das",
+				"www\\templates\\tab-dash.html"
+			],
+			[
+				"recipe.html",
+				"www\\templates\\recipe.html"
+			],
+			[
+				"dash",
+				"www\\templates\\tab-dash.html"
+			],
+			[
+				"tab-dash",
+				"www\\templates\\tab-dash.html"
+			],
+			[
+				"dire",
+				"www\\js\\directives.js"
+			],
+			[
+				"home",
+				"www\\templates\\home.html"
+			],
+			[
+				"tabs.html",
+				"www\\templates\\tabs.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 41.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 752.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
