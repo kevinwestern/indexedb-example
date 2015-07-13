@@ -2,13 +2,34 @@
 <html>
   <head>
 
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="bower_components/paper-input/paper-textarea.html">
+    <link rel="import" href="bower_components/paper-material/paper-material.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="components/kw-question/kw-question.html"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
 
-    <form method="POST" id="questionForm">
-      <textarea id="text"></textarea>
-      <button type="submit">Submit</button>
-    </form>
+    <paper-header-panel>
+      <paper-toolbar>
+        <div>Hello, world!</div>
+      </paper-toolbar>
+      <div class="fit" id="questioner-content">
+        <div id="questions" class="layout vertical flex">
+          <paper-material id="new-question">
+            <form method="POST" id="questionForm">
+              <paper-textarea id="text" label="What's your question?"></paper-textarea>
+              <paper-button type="submit" id="submit">Ask</paper-button>
+            </form>
+          </paper-material>
+        </div>
+      </div>
+    </paper-header-panel>
 
     <script src="js/app.es5.js"></script>
   </body>

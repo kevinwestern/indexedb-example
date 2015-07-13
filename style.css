@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+}
+
+#questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+kw-question,
+#new-question {
+  width: 33%;
+  margin-bottom: 24px;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+paper-button {
+  color: #4285f4
+}
+
+#questionForm {
+  text-align: right;
+}
+
+
+#text {
+  text-align: left;
+}
+
+#questioner-content {
+  padding-top: 24px;
+}

@@ -52,24 +52,28 @@
 
 	var form = document.querySelector('#questionForm');
 	var text = document.querySelector('#text');
+	var submitButton = document.querySelector('#submit');
 	var db = new _db.DB('questioner', 1);
+	var questionsEl = document.querySelector('#questions');
 
-	form.addEventListener('submit', function (evt) {
-	  var question = new _modelsQuestion.Question(text.value);
+	var submit = function submit(evt) {
+	  var question = new _modelsQuestion.Question(text.value, 1);
 	  db.saveQuestion(question).then(function () {
 	    return displayQuestion(question);
+	  }).then(function () {
+	    return text.value = '';
 	  });
 	  evt.stopPropagation();
 	  evt.preventDefault();
-	});
+	};
 
 	var displayQuestion = function displayQuestion(question) {
-	  document.body.appendChild(createQuestionElement(question));
+	  questionsEl.insertBefore(createQuestionElement(question), questionsEl.childNodes[2]);
 	};
 
 	var createQuestionElement = function createQuestionElement(question) {
-	  var el = document.createElement('div');
-	  el.textContent = question.text;
+	  var el = document.createElement('kw-question');
+	  el.question = question;
 	  return el;
 	};
 
@@ -83,8 +87,12 @@
 	  questions.forEach(function (question) {
 	    return fragment.appendChild(createQuestionElement(question));
 	  });
-	  document.body.appendChild(fragment);
+	  var questionsEl = document.querySelector('#questions');
+	  questionsEl.appendChild(fragment);
 	};
+
+	form.addEventListener('submit', submit);
+	submitButton.addEventListener('click', submit);
 
 /***/ },
 /* 1 */
@@ -212,10 +220,11 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var Question = function Question(text) {
+	var Question = function Question(text, votes) {
 	  _classCallCheck(this, Question);
 
 	  this.text = text;
+	  this.votes = votes;
 	};
 
 	exports.Question = Question;

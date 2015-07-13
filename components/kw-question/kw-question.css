@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.content.kw-question {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  height: 88px;
+}
+
+.votes.kw-question {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+paper-icon-button.kw-question {
+  cursor: pointer;
+  color: rgba(0, 0, 0, .2);
+}
+
+paper-icon-button.kw-question:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, .6);
+}
