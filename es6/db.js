@@ -1,3 +1,5 @@
+import {Question} from './models/Question';
+
 export class DB {
 
   constructor(name, version) {
@@ -40,7 +42,7 @@ export class DB {
         cursor.onsuccess = (evt) => {
           const result = event.target.result;
           if (result) {
-            questions.push(result.value);
+            questions.push(Question.fromJSON(result.value));
             result.continue();
           } else {
             resolve(questions);

@@ -96,7 +96,7 @@
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -107,6 +107,8 @@
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	var _modelsQuestion = __webpack_require__(2);
 
 	var DB = (function () {
 	  function DB(name, version) {
@@ -164,7 +166,7 @@
 	          cursor.onsuccess = function (evt) {
 	            var result = event.target.result;
 	            if (result) {
-	              questions.push(result.value);
+	              questions.push(_modelsQuestion.Question.fromJSON(result.value));
 	              result['continue']();
 	            } else {
 	              resolve(questions);
@@ -218,16 +220,49 @@
 	  value: true
 	});
 
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var Question = function Question(text, votes) {
-	  _classCallCheck(this, Question);
+	var Question = (function () {
+	  function Question(text, votes) {
+	    _classCallCheck(this, Question);
 
-	  this.text = text;
-	  this.votes = votes;
-	};
+	    this.text = text;
+	    this.votes = votes;
+	    this.vote = 0;
+	  }
+
+	  _createClass(Question, [{
+	    key: "upVote",
+	    value: function upVote() {
+	      if (this.vote == 1) {
+	        this.vote = 0;
+	      } else {
+	        this.vote = 1;
+	      }
+	    }
+	  }, {
+	    key: "downVote",
+	    value: function downVote() {
+	      if (this.vote == -1) {
+	        this.vote = 0;
+	      } else {
+	        this.vote = -1;
+	      }
+	    }
+	  }], [{
+	    key: "fromJSON",
+	    value: function fromJSON(json) {
+	      return new Question(json.text, json.votes);
+	    }
+	  }]);
+
+	  return Question;
+	})();
 
 	exports.Question = Question;
+	;
 
 /***/ }
 /******/ ]);

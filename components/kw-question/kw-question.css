@@ -23,7 +23,11 @@ paper-icon-button.kw-question {
   color: rgba(0, 0, 0, .2);
 }
 
+paper-icon-button.kw-question.selected {
+  color: rgba(0, 0, 0, .6);
+}
+
 paper-icon-button.kw-question:hover {
   cursor: pointer;
-  color: rgba(0, 0, 0, .6);
+  color: rgba(0, 0, 0, .7);
 }
