@@ -19,12 +19,12 @@ Polymer({
 
   upVote: function(evt) {
     this.question.upVote();
-    this._setVote(this.question.vote);
+    this._setVote(this.question.vote, true);
   },
 
   downVote: function(evt) {
     this.question.downVote();
-    this._setVote(this.question.vote);
+    this._setVote(this.question.vote, true);
   },
 
   getComputedVotes_: function(vote) {
@@ -36,7 +36,10 @@ Polymer({
       || (vote == -1 && thumb == 'down')) ? 'selected' : '';
   },
 
-  _setVote: function(vote) {
+  _setVote: function(vote, opt_broadcast) {
     this.vote = vote;
+    if (opt_broadcast) {
+      this.fire('questionChanged', this.question);
+    }
   }
 });

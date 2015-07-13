@@ -57,7 +57,7 @@
 	var questionsEl = document.querySelector('#questions');
 
 	var submit = function submit(evt) {
-	  var question = new _modelsQuestion.Question(text.value, 1);
+	  var question = new _modelsQuestion.Question(text.value, 0);
 	  db.saveQuestion(question).then(function () {
 	    return displayQuestion(question);
 	  }).then(function () {
@@ -78,8 +78,10 @@
 	};
 
 	// Display all questions from the db
-	db.getAllQuestions().then(function (questions) {
-	  return showAllQuestions(questions);
+	window.requestAnimationFrame(function () {
+	  return db.getAllQuestions().then(function (questions) {
+	    return showAllQuestions(questions);
+	  });
 	});
 
 	var showAllQuestions = function showAllQuestions(questions) {
@@ -93,6 +95,9 @@
 
 	form.addEventListener('submit', submit);
 	submitButton.addEventListener('click', submit);
+	document.addEventListener('questionChanged', function (evt) {
+	  db.updateQuestion(evt.detail);
+	});
 
 /***/ },
 /* 1 */
@@ -147,26 +152,40 @@
 	        var store = _this.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_WRITE);
 	        var request = store.add(question);
 	        return new Promise(function (resolve, reject) {
-	          request.onsuccess = function () {
-	            return resolve(question);
+	          request.onsuccess = function (e) {
+	            question.setKey(e.target.result);
+	            resolve(question);
 	          };
 	        });
 	      });
 	    }
 	  }, {
-	    key: 'getAllQuestions',
-	    value: function getAllQuestions() {
+	    key: 'updateQuestion',
+	    value: function updateQuestion(question) {
 	      var _this2 = this;
 
 	      return this.getDb_().then(function (db) {
-	        var store = _this2.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_ONLY);
+	        var store = _this2.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_WRITE);
+	        var request = store.get(question.key);
+	        request.onsuccess = function (evt) {
+	          store.put(question, question.key);
+	        };
+	      });
+	    }
+	  }, {
+	    key: 'getAllQuestions',
+	    value: function getAllQuestions() {
+	      var _this3 = this;
+
+	      return this.getDb_().then(function (db) {
+	        var store = _this3.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_ONLY);
 	        var cursor = store.openCursor();
 	        return new Promise(function (resolve, reject) {
 	          var questions = [];
 	          cursor.onsuccess = function (evt) {
 	            var result = event.target.result;
 	            if (result) {
-	              questions.push(_modelsQuestion.Question.fromJSON(result.value));
+	              questions.push(_modelsQuestion.Question.fromJSON(result.value, result.key));
 	              result['continue']();
 	            } else {
 	              resolve(questions);
@@ -225,12 +244,13 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Question = (function () {
-	  function Question(text, votes) {
+	  function Question(text, votes, opt_vote, opt_key) {
 	    _classCallCheck(this, Question);
 
 	    this.text = text;
 	    this.votes = votes;
-	    this.vote = 0;
+	    this.vote = opt_vote == undefined ? 1 : opt_vote;
+	    this.key = opt_key;
 	  }
 
 	  _createClass(Question, [{
@@ -251,10 +271,15 @@
 	        this.vote = -1;
 	      }
 	    }
+	  }, {
+	    key: "setKey",
+	    value: function setKey(key) {
+	      this.key = key;
+	    }
 	  }], [{
 	    key: "fromJSON",
-	    value: function fromJSON(json) {
-	      return new Question(json.text, json.votes);
+	    value: function fromJSON(json, opt_key) {
+	      return new Question(json.text, json.votes, json.vote, opt_key);
 	    }
 	  }]);
 

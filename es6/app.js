@@ -8,7 +8,7 @@ const db = new DB('questioner', 1);
 const questionsEl = document.querySelector("#questions");
 
 const submit = (evt) => {
-  const question = new Question(text.value, 1);
+  const question = new Question(text.value, 0);
   db.saveQuestion(question)
     .then(() => displayQuestion(question))
     .then(() => text.value = '');
@@ -27,7 +27,8 @@ const createQuestionElement = (question) => {
 };
 
 // Display all questions from the db
-db.getAllQuestions().then((questions) => showAllQuestions(questions));
+window.requestAnimationFrame(() =>
+  db.getAllQuestions().then((questions) => showAllQuestions(questions)));
 
 const showAllQuestions = (questions) => {
   const fragment = document.createDocumentFragment();
@@ -38,3 +39,6 @@ const showAllQuestions = (questions) => {
 
 form.addEventListener('submit', submit);
 submitButton.addEventListener('click', submit);
+document.addEventListener('questionChanged', (evt) => {
+  db.updateQuestion(evt.detail);
+});

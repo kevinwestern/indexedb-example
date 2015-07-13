@@ -28,8 +28,21 @@ export class DB {
       const store = this.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_WRITE);
       const request = store.add(question);
       return new Promise((resolve, reject) => {
-        request.onsuccess = () => resolve(question)
+        request.onsuccess = (e) => {
+          question.setKey(e.target.result);
+          resolve(question)
+        }
       });
+    });
+  }
+
+  updateQuestion(question) {
+    return this.getDb_().then((db) => {
+      const store = this.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_WRITE);
+      const request = store.get(question.key);
+      request.onsuccess = (evt) => {
+        store.put(question, question.key)
+      }
     });
   }
 
@@ -42,7 +55,7 @@ export class DB {
         cursor.onsuccess = (evt) => {
           const result = event.target.result;
           if (result) {
-            questions.push(Question.fromJSON(result.value));
+            questions.push(Question.fromJSON(result.value, result.key));
             result.continue();
           } else {
             resolve(questions);
