@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../kw-question/kw-question.html"/>
+
+<dom-module id="kw-question-list">
+  <link rel="stylesheet" type="text/css" href="kw-question-list.css">
+
+  <template>
+    <div id="questions" class="layout vertical flex">
+      <paper-material id="new-question">
+        <form method="POST" id="questionForm" on-submit="submit">
+          <paper-textarea id="text" label="What's your question?"></paper-textarea>
+          <paper-button type="submit" id="submit" on-click="submit">Ask</paper-button>
+        </form>
+      </paper-material>
+      <template is="dom-repeat" items="{{questionsJsArr}}" as="question">
+        <kw-question question="{{question}}"></kw-question>
+      </template>
+    </div>
+  </template>
+
+</dom-module>
+<script src="kw-question-list.js"></script>

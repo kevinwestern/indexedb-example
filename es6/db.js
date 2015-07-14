@@ -58,7 +58,7 @@ export class DB {
             questions.push(Question.fromJSON(result.value, result.key));
             result.continue();
           } else {
-            resolve(questions);
+            resolve(new Immutable.List(questions));
           }
         }
       });

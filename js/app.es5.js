@@ -52,51 +52,20 @@
 
 	var form = document.querySelector('#questionForm');
 	var text = document.querySelector('#text');
-	var submitButton = document.querySelector('#submit');
 	var db = new _db.DB('questioner', 1);
-	var questionsEl = document.querySelector('#questions');
 
-	var submit = function submit(evt) {
-	  var question = new _modelsQuestion.Question(text.value, 0);
-	  db.saveQuestion(question).then(function () {
-	    return displayQuestion(question);
-	  }).then(function () {
-	    return text.value = '';
-	  });
-	  evt.stopPropagation();
-	  evt.preventDefault();
-	};
-
-	var displayQuestion = function displayQuestion(question) {
-	  questionsEl.insertBefore(createQuestionElement(question), questionsEl.childNodes[2]);
-	};
-
-	var createQuestionElement = function createQuestionElement(question) {
-	  var el = document.createElement('kw-question');
-	  el.question = question;
-	  return el;
-	};
-
-	// Display all questions from the db
-	window.requestAnimationFrame(function () {
-	  return db.getAllQuestions().then(function (questions) {
-	    return showAllQuestions(questions);
-	  });
+	var questionsList = [];
+	var questionsEl = document.querySelector('kw-question-list');
+	db.getAllQuestions().then(function (questions) {
+	  questionsList = questions;
+	  questionsEl.questions = questionsList;
 	});
 
-	var showAllQuestions = function showAllQuestions(questions) {
-	  var fragment = document.createDocumentFragment();
-	  questions.forEach(function (question) {
-	    return fragment.appendChild(createQuestionElement(question));
+	document.addEventListener('addQuestion', function (evt) {
+	  db.saveQuestion(new _modelsQuestion.Question(evt.detail, 0)).then(function (question) {
+	    questionsList = questionsList.unshift(question);
+	    questionsEl.questions = questionsList;
 	  });
-	  var questionsEl = document.querySelector('#questions');
-	  questionsEl.appendChild(fragment);
-	};
-
-	form.addEventListener('submit', submit);
-	submitButton.addEventListener('click', submit);
-	document.addEventListener('questionChanged', function (evt) {
-	  db.updateQuestion(evt.detail);
 	});
 
 /***/ },
@@ -188,7 +157,7 @@
 	              questions.push(_modelsQuestion.Question.fromJSON(result.value, result.key));
 	              result['continue']();
 	            } else {
-	              resolve(questions);
+	              resolve(new Immutable.List(questions));
 	            }
 	          };
 	        });
