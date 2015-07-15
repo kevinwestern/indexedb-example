@@ -270,8 +270,9 @@
 	  }, {
 	    key: "addComment",
 	    value: function addComment(text) {
-	      this.comments.push(text);
-	      return new Question(this.text, this.votes, this.vote, this.key, this.comments);
+	      var comments = this.comments.slice();
+	      comments.push(text);
+	      return new Question(this.text, this.votes, this.vote, this.key, comments);
 	    }
 	  }, {
 	    key: "setKey",

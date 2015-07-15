@@ -24,8 +24,9 @@ export class Question {
   }
 
   addComment(text) {
-    this.comments.push(text);
-    return new Question(this.text, this.votes, this.vote, this.key, this.comments);
+    const comments = this.comments.slice();
+    comments.push(text);
+    return new Question(this.text, this.votes, this.vote, this.key, comments);
   }
 
   setKey(key) {
