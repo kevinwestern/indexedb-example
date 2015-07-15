@@ -32,3 +32,7 @@ document.addEventListener('upvoteQuestion', evt => {
 document.addEventListener('downvoteQuestion', evt => {
   db.updateQuestion(evt.detail.downVote()).then(updateQuestionsList);
 });
+
+document.addEventListener('submitComment', evt => {
+  db.updateQuestion(evt.detail.question.addComment(evt.detail.commentText)).then(updateQuestionsList);
+})

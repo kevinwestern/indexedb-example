@@ -86,6 +86,10 @@
 	  db.updateQuestion(evt.detail.downVote()).then(updateQuestionsList);
 	});
 
+	document.addEventListener('submitComment', function (evt) {
+	  db.updateQuestion(evt.detail.question.addComment(evt.detail.commentText)).then(updateQuestionsList);
+	});
+
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
@@ -235,32 +239,40 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Question = (function () {
-	  function Question(text, votes, opt_vote, opt_key) {
+	  function Question(text, votes, opt_vote, opt_key, opt_comments) {
 	    _classCallCheck(this, Question);
 
 	    this.text = text;
 	    this.votes = votes;
 	    this.vote = opt_vote == undefined ? 1 : opt_vote;
 	    this.key = opt_key;
+	    this.comments = opt_comments || [];
 	  }
 
 	  _createClass(Question, [{
 	    key: "upVote",
 	    value: function upVote() {
 	      if (this.vote == 1) {
-	        return new Question(this.text, this.votes, 0, this.key);
+	        return new Question(this.text, this.votes, 0, this.key, this.comments);
 	      } else {
-	        return new Question(this.text, this.votes, 1, this.key);
+	        return new Question(this.text, this.votes, 1, this.key, this.comments);
 	      }
 	    }
 	  }, {
 	    key: "downVote",
 	    value: function downVote() {
 	      if (this.vote == -1) {
-	        return new Question(this.text, this.votes, 0, this.key);
+	        return new Question(this.text, this.votes, 0, this.key, this.comments);
 	      } else {
-	        return new Question(this.text, this.votes, -1, this.key);
+	        return new Question(this.text, this.votes, -1, this.key, this.comments);
 	      }
+	    }
+	  }, {
+	    key: "addComment",
+	    value: function addComment(text) {
+	      var comments = this.comments.slice();
+	      comments.push(text);
+	      return new Question(this.text, this.votes, this.vote, this.key, comments);
 	    }
 	  }, {
 	    key: "setKey",
@@ -270,7 +282,7 @@
 	  }], [{
 	    key: "fromJSON",
 	    value: function fromJSON(json, opt_key) {
-	      return new Question(json.text, json.votes, json.vote, opt_key);
+	      return new Question(json.text, json.votes, json.vote, opt_key, json.comments);
 	    }
 	  }]);
 
