@@ -40,9 +40,13 @@ export class DB {
     return this.getDb_().then((db) => {
       const store = this.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_WRITE);
       const request = store.get(question.key);
-      request.onsuccess = (evt) => {
-        store.put(question, question.key)
-      }
+      return new Promise((resolve, reject) => {
+        request.onsuccess = (evt) => {
+          store.put(question, question.key).onsuccess = (e) => {
+            resolve(question)
+          }
+        }
+      });
     });
   }
 

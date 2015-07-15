@@ -8,17 +8,17 @@ export class Question {
 
   upVote() {
     if (this.vote == 1) {
-      this.vote = 0;
+      return new Question(this.text, this.votes, 0, this.key);
     } else {
-      this.vote = 1;
+      return new Question(this.text, this.votes, 1, this.key);
     }
   }
 
   downVote() {
     if (this.vote == -1) {
-      this.vote = 0;
+      return new Question(this.text, this.votes, 0, this.key);
     } else {
-      this.vote = -1;
+      return new Question(this.text, this.votes, -1, this.key);
     }
   }
 

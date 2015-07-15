@@ -61,11 +61,29 @@
 	  questionsEl.questions = questionsList;
 	});
 
+	var updateQuestionsList = function updateQuestionsList(questionToUpdate) {
+	  var index = questionsList.findIndex(function (question) {
+	    return question.key == questionToUpdate.key;
+	  });
+	  questionsList = questionsList.update(index, function () {
+	    return questionToUpdate;
+	  });
+	  questionsEl.questions = questionsList;
+	};
+
 	document.addEventListener('addQuestion', function (evt) {
 	  db.saveQuestion(new _modelsQuestion.Question(evt.detail, 0)).then(function (question) {
 	    questionsList = questionsList.unshift(question);
 	    questionsEl.questions = questionsList;
 	  });
+	});
+
+	document.addEventListener('upvoteQuestion', function (evt) {
+	  db.updateQuestion(evt.detail.upVote()).then(updateQuestionsList);
+	});
+
+	document.addEventListener('downvoteQuestion', function (evt) {
+	  db.updateQuestion(evt.detail.downVote()).then(updateQuestionsList);
 	});
 
 /***/ },
@@ -136,9 +154,13 @@
 	      return this.getDb_().then(function (db) {
 	        var store = _this2.openStore_(db, DB.Objects.QUESTION, DB.Transaction.READ_WRITE);
 	        var request = store.get(question.key);
-	        request.onsuccess = function (evt) {
-	          store.put(question, question.key);
-	        };
+	        return new Promise(function (resolve, reject) {
+	          request.onsuccess = function (evt) {
+	            store.put(question, question.key).onsuccess = function (e) {
+	              resolve(question);
+	            };
+	          };
+	        });
 	      });
 	    }
 	  }, {
@@ -226,18 +248,18 @@
 	    key: "upVote",
 	    value: function upVote() {
 	      if (this.vote == 1) {
-	        this.vote = 0;
+	        return new Question(this.text, this.votes, 0, this.key);
 	      } else {
-	        this.vote = 1;
+	        return new Question(this.text, this.votes, 1, this.key);
 	      }
 	    }
 	  }, {
 	    key: "downVote",
 	    value: function downVote() {
 	      if (this.vote == -1) {
-	        this.vote = 0;
+	        return new Question(this.text, this.votes, 0, this.key);
 	      } else {
-	        this.vote = -1;
+	        return new Question(this.text, this.votes, -1, this.key);
 	      }
 	    }
 	  }, {

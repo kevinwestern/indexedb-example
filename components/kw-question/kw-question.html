@@ -13,11 +13,11 @@
         <div class="votes">
           <paper-icon-button icon="icons:thumb-up"
             on-click="upVote"
-            class$="{{getClassNames(vote, 'up')}}"></paper-icon-button>
+            class$="{{getClassNames(question, 'up')}}"></paper-icon-button>
           <h3>{{computedVotes}}</h3>
           <paper-icon-button icon="icons:thumb-down"
             on-click="downVote"
-            class$="{{getClassNames(vote, 'down')}}"></paper-icon-button>
+            class$="{{getClassNames(question, 'down')}}"></paper-icon-button>
         </div>
         <h2>{{question.text}}</h2>
       </div>

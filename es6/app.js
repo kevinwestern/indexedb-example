@@ -12,9 +12,23 @@ db.getAllQuestions().then((questions) => {
   questionsEl.questions = questionsList;
 });
 
-document.addEventListener('addQuestion', (evt) => {
+const updateQuestionsList = (questionToUpdate) => {
+  const index = questionsList.findIndex((question) => question.key == questionToUpdate.key);
+  questionsList = questionsList.update(index, () => questionToUpdate);
+  questionsEl.questions = questionsList;
+}
+
+document.addEventListener('addQuestion', evt => {
   db.saveQuestion(new Question(evt.detail, 0)).then(question => {
     questionsList = questionsList.unshift(question);
     questionsEl.questions = questionsList;
-  })
+  });
 })
+
+document.addEventListener('upvoteQuestion', evt => {
+  db.updateQuestion(evt.detail.upVote()).then(updateQuestionsList);
+});
+
+document.addEventListener('downvoteQuestion', evt => {
+  db.updateQuestion(evt.detail.downVote()).then(updateQuestionsList);
+});
