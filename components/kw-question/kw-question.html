@@ -1,14 +1,16 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
 <link rel="import" href="../../bower_components/paper-material/paper-material.html">
 
 <dom-module id="kw-question">
   <link rel="stylesheet" type="text/css" href="kw-question.css">
 
   <template>
-    <paper-material elevation="1">
+    <paper-material elevation="2">
       <div class="content">
         <div class="votes">
           <paper-icon-button icon="icons:thumb-up"
@@ -21,7 +23,22 @@
         </div>
         <h2>{{question.text}}</h2>
       </div>
+      <div class="flex">
+        <paper-button on-click="showCommentBox">Comment</paper-button>
+      </div>
     </paper-material>
+    <div id="commentBox" class="hidden">
+      <paper-textarea id="comment" label="Leave your comment"></paper-textarea>
+      <div class="flex">
+        <paper-button on-click="submitComment">Submit</paper-button>
+      </div>
+    </div>
+    <span>{{question.comments.length}}</span>
+    <ul>
+      <template is="dom-repeat" items="{{question.comments}}" as="comment">
+        <li>{{comment}}</li>
+      </template>
+    </ul>
   </template>
 
 </dom-module>

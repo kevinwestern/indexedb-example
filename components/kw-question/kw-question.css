@@ -2,16 +2,25 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  height: 88px;
 }
 
 .votes.kw-question {
   width: 40px;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+}
+
+.flex.kw-question {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.kw-question.hidden {
+  opacity: 0;
 }
 
 paper-icon-button.kw-question {
